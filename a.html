@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+  <script src="https://www.shaamtv.com/source/hls-js/hls.js"></script>
+<script>
+var md5 = "GtVmfwq1XjBglhzcJZ_-7Q";
+var curtime = "1646564877";
+</script>
+
+<video width="100%" height="100%" id="video" controls="" src="blob:https://www.shaamtv.com/51b6a284-2759-4ccc-8393-3380c2c9a730"></video>
+<script>
+
+var video = document.getElementById('video');
+var hls = new Hls();
+var m3u8 = "https://live-kcs.cdnvideo.ru/shaamtv/superleag/playlist.m3u8?md5=";
+
+hls.loadSource(m3u8+md5+"&e="+curtime);
+hls.attachMedia(video);
+hls.on(Hls.Events.MANIFEST_PARSED,function() {
+video.play();
+});
+</script>
+  </body>
+</html>
